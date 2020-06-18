@@ -9,8 +9,8 @@ public class Demo1 {
         print2();
         System.out.println("----------—--------------------------");
         //计算1到100的素数和
-        int n=100;
-        int ans=calc(n);
+        int n=10000000;
+        long ans=calc(n);
         System.out.println("1到"+n+"的素数和是："+ans);
     }
     //打印99乘法表
@@ -32,12 +32,12 @@ public class Demo1 {
         }
     }
     //计算1到n的质数和
-    public static int calc(int n){
+    public static long calc(int n){
         /**
          * 线性筛法，每个数字只被标记一次
          * 时间复杂度O(n)
          */
-        int ans=0;//保存答案
+        long ans=0;//保存答案
         int[] v=new int[n+1]; //v[i]记录i的最小质因子 ，v[i]==i则i是质数
         int[] prime=new int[n+1];  //保存素数
         int number=0;//质数个数
